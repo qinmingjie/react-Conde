@@ -1,0 +1,159 @@
+body{
+    background-color: #e1e1e1;
+    min-height:100%;
+}
+body .ant-layout{
+    min-height:100vh;
+}
+.setColor{
+    background-color: transparent;
+}
+.wrap{
+    margin:0 5px;
+    font-size:13px;
+}
+#footer{
+    padding:24px 0;
+}
+/* 头部 */
+
+#header{
+    background-color: #444;
+    height:auto;
+    line-height:40px;
+    padding:5px 0;
+}
+.logo img{
+    margin-top:-14px;
+    width:160px;
+    height:28px;
+}
+.headerNav a{
+    padding:10px 15px;
+    color:#ccc;
+}
+.headerNav a:hover{
+    color:#fff;
+}
+.headerNav .active{
+    color:#fff;
+}
+/* 首页子导航 */
+.ant-menu-item.ant-menu-item-only-child.ant-menu-item-selected{
+    border-bottom:2px solid #80bd01;
+}
+.ant-menu-horizontal > .ant-menu-item-selected > a{
+    color:#80bd01;
+}
+.ant-menu-horizontal > .ant-menu-item:hover{
+    border-bottom:2px solid #80bd01;
+}
+.ant-menu-horizontal > .ant-menu-item > a:hover{
+    color:#80bd01;
+}
+.ant-menu-horizontal > .ant-menu-submenu:hover{
+    border-bottom:2px solid #80bd01;
+    color:#80bd01;
+}
+.ant-menu-submenu-title:hover{
+    color:#80bd01;
+}
+.ant-menu-horizontal > .ant-menu-item:hover{
+    
+    color:#80bd01;
+}
+
+.ant-menu-horizontal > .ant-menu-submenu-selected{
+    border-bottom:2px solid #80bd01;
+    color:#80bd01;
+}
+.ant-menu-horizontal > .ant-menu-item-selected{
+    color:#80bd01;
+}
+.ant-menu-item-selected > a{
+    color:#80bd01;
+}
+.ant-menu-item-selected > a, .ant-menu-item-selected > a:hover{
+    
+    color:#80bd01;
+}
+.ant-menu-item > a:hover{
+    color:#80bd01;
+}
+.ant-menu-item:hover{
+    color:#80bd01;
+}
+/* 列表 */
+.listName,.wrap .List{
+    background-color:#fff;
+    padding-left:5px;
+    min-height:1120px;
+}
+.wrap .List a{
+    overflow: hidden;;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color:#000;
+}
+#text-wrap{
+    overflow: hidden;;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.ant-tag.ant-tag-has-color{
+    text-align:center;
+}
+/* 分页 */
+.IndexPagnation{
+    padding:15px;
+}
+.IndexPagnation .ant-pagination-item-active{
+    border-color: #ddd
+}
+.IndexPagnation .ant-pagination-item-active:hover{
+    border-color: #80bd01
+}
+.IndexPagnation .ant-pagination-item:hover{
+    border-color: #80bd01;
+}
+.IndexPagnation  .ant-pagination-item-active a{
+    color: #80bd01;
+}
+.IndexPagnation  .ant-pagination-item-active:hover a{
+    color: #80bd01;
+}
+.IndexPagnation  .ant-pagination-item:hover a{
+    color: #80bd01;
+}
+
+/* 相应 */
+@media all and (min-width:576px){
+    .wrap{
+        margin:0 5px;
+    }
+    .wrap .List{
+        padding-left:5px;
+    }
+}
+@media all and (min-width:768px){
+    .wrap{
+        margin:0 10px;
+    }
+    .wrap .List{
+        padding-left:10px;
+    }
+}
+@media all and (min-width:992px){
+    .wrap{
+        margin:0 15px;
+    }
+    .wrap .List{
+        padding-left:15px;
+    }
+}
+@media all and (min-width:1200px){
+    .wrap{
+        width:980px;
+        margin:0 auto;
+    }
+}
