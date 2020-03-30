@@ -13,7 +13,7 @@ function App() {
 			<Layout className="setColor">
 				<Header/>
 				<Layout.Content>
-					<div className="wrap">
+					<div className="wrap getstart">
 						<Switch> {/**循环路由信息  遇到的问题：不管进那个页面都会显示404，解决：没有用switch,switch匹配到一个后后面的就不会匹配了*/}
 							{router.map((item,index)=>{  
 								return <Route 

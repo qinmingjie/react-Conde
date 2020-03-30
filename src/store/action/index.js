@@ -12,7 +12,7 @@ function useToplist(){
             type:"edit_loading",
             loading:false
         })
-        http.get(`/topics?tab=${tab}&page=${page}&limit=${limit}`).then((res)=>{
+        http.get(`/topics?tab=${tab}&page=${page}&limit=${limit}&mdrender="true"`).then((res)=>{
             dispatch({
                 type:"edit_data",
                 data:res.data.data
@@ -32,13 +32,36 @@ function useTopic(){
             loading:false
         })
         http.get(`/topic/${id}`).then((res)=>{
-            console.log(res)
             dispatch({
                 type:"pic_data",
+                isError:false,
                 data:res.data.data
             })
-        }).catch((err)=>{
-            console.log(err)
+        }).catch((err)=>{   //判断文章id是否错误有数据
+            let {error_msg} = err.response.data;
+            dispatch({
+                type:"pic_error",
+                error_msg:error_msg,
+                isError:true,
+                data:{}
+            })
+        })
+    }
+}
+
+//获取用户详情
+export default function useLogin(){
+    let dispatch = useDispatch();
+    return function(loginname){
+        dispatch({
+            type:"user_loading",
+            loading:false
+        })
+        http.get(`/user/${loginname}`).then((res)=>{
+            dispatch({
+                type:"user_data",
+                data:res.data.data
+            })
         })
     }
 }

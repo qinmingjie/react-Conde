@@ -16,7 +16,7 @@ function IndexNav(props){
                     id="AllNavm"
                     mode="horizontal"
                     defaultSelectedKeys={activeIndex+""}
-                    style={{marginTop:"20px",backgroundColor:"#f6f6f6"}}
+                    style={{backgroundColor:"#f6f6f6"}}
                 >
                     {NavData.map((item,index)=>{
                         return(

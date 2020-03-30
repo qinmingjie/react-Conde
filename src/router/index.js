@@ -19,6 +19,15 @@ let router = [
         }
     },
     {
+        path:"/build",
+        exact:true,
+        render(props){
+            let {search} = props.location
+            let {tab,page} = qs.parse(search.slice(1))
+            return <Redirect to="/index"/>
+        }
+    },
+    {
         path:"/index",
         exact:true,
         render(props){
@@ -56,7 +65,7 @@ let router = [
         }
     },
     {
-        path:"/user/:username",
+        path:"/user/:loginname",
         exact:true,
         render(props){
             let {search} = props.location

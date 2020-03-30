@@ -3,7 +3,7 @@ import {List,Col,Avatar } from "antd"
 import {UserOutlined} from "@ant-design/icons";
 import {Link} from "react-router-dom";
 import Sort from "./sort"
-import IndexPagnation from "./indexPagnation"
+import Time from "../component/time"
 function InnerList(props){
     let {data,loading} = props  //请求到的数据data然后写入列表
     return(
@@ -20,12 +20,12 @@ function InnerList(props){
                     renderItem={(data)=>{
                         // console.log(data)
                         let {author,id,last_reply_at,tab,good,top} = data   //解构请求到的数据data中的数据传给子组件来判断是什么分类标签
-                        // console.log("列表"+tab,top,good)
+                        console.log(last_reply_at)
                         // console.log(top?"top":(good?"good":((tab===undefined)?"other":tab)))
                         return <List.Item id={data.author_id} justify="space-between">
                             {/**设置头像链接 */}
                             <Col xs={2} md={2}>
-                                <Link to={`/user/${data.author_id}`}>
+                                <Link to={`/user/${data.author.loginname}`}>
                                     <Avatar src={data.author.avatar_url} shape="square" icon={<UserOutlined/>}>
                                     </Avatar>
                                 </Link>
@@ -37,16 +37,16 @@ function InnerList(props){
                                 </Link>
                             </Col>
                             <Col xs={0} md={4}>
-                                <Link to={`/user/${data.author_id}`}>
+                                <Link to={`/user/${data.author.loginname}`}>
                                     <Avatar src={data.author.avatar_url} size="small" shape="square">
                                     <UserOutlined/>
                                     </Avatar>
                                 </Link>
+                                <span style={{marginLeft:"15px",fontSize:"12px",color:"#778087"}}><Time time={last_reply_at}/></span>
                             </Col>
                         </List.Item>
                     }}
                 />
-                <IndexPagnation/>
             </div>
         </Fragment>
     )

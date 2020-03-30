@@ -2,8 +2,18 @@ body{
     background-color: #e1e1e1;
     min-height:100%;
 }
+.markdown-text img{
+    width:100%;
+}
+#replicesName img{
+    max-width:100%;
+}
 body .ant-layout{
     min-height:100vh;
+}
+.wrap{
+    background-color:#fff;
+    overflow: hidden;
 }
 .setColor{
     background-color: transparent;
@@ -11,17 +21,21 @@ body .ant-layout{
 .wrap{
     margin:0 5px;
     font-size:13px;
+    border-radius:5px;
 }
 #footer{
     padding:24px 0;
+    background-color:#fff;
 }
 /* 头部 */
-
 #header{
     background-color: #444;
     height:auto;
     line-height:40px;
     padding:5px 0;
+}
+#header .wrap{
+    background-color:transparent;
 }
 .logo img{
     margin-top:-14px;
@@ -124,6 +138,57 @@ body .ant-layout{
 }
 .IndexPagnation  .ant-pagination-item:hover a{
     color: #80bd01;
+}
+
+/* 文章详情 */
+.wrap .ant-card{
+    margin-top:20px;
+}
+#replicesName li{
+    border-bottom:1px solid #ddd;
+}
+
+/* 用户详情 */
+#usePage .listName{
+    min-height:auto;
+}
+#usePage .List{
+    min-height:auto;
+}
+#usePage p{
+    margin-top:15px;
+    text-align:center;
+}
+#usePage .useIcon{
+    text-align:center;
+}
+#usePage .useheader{
+    text-align:left;
+}
+
+/* 新手入门 */
+.ant-breadcrumb a:hover{
+    color:#80bd01;
+}
+
+#start{
+    margin-top:0;
+}
+.wrap.getstart{
+    margin-top:20px;
+}
+/* 关于 */
+.getstart .ant-card{
+    margin-top:0;
+}
+.about img{
+    max-width:100%;
+}
+
+/* 页脚 */
+#foot{
+    background-color:#ffffff;
+    margin-top:20px;
 }
 
 /* 相应 */
